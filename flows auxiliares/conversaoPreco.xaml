@@ -85,7 +85,7 @@
       <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="conversaoPreco" sap:VirtualizedContainerService.HintSize="1194,674.04" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="conversaoPreco" sap:VirtualizedContainerService.HintSize="736,674.04" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="dolarCotacao" />
     </Sequence.Variables>
@@ -96,10 +96,7 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" ExistingDbConnection="{x:Null}" TimeoutMS="{x:Null}" ConnectionString="Driver={SQLite3 ODBC Driver};Database=bancoDados.db;" DisplayName="Run Command" sap:VirtualizedContainerService.HintSize="416,146" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_2" ProviderName="System.Data.Odbc" Sql="Select precoProduto From Produto">
       <ui:ExecuteNonQuery.Parameters>
-        <InArgument x:TypeArguments="x:String" x:Key="nomeProd">[nomeProduto]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="precoProd">[precoProduto]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="freteProd">[freteProduto]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="urlProd">[urlProduto]</InArgument>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:ExecuteNonQuery.Parameters>
     </ui:ExecuteNonQuery>
     <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="https://v6.exchangerate-api.com/v6/dd9a01897d4ddea91d5fa146/pair/USD/BRL" sap:VirtualizedContainerService.HintSize="416,102" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="GET" Result="[dolarCotacao]" TimeoutMS="6000">
