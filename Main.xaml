@@ -105,7 +105,7 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1399,1322" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1399,1324" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="produtoInput" />
     </Sequence.Variables>
@@ -114,24 +114,25 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input inicial" sap:VirtualizedContainerService.HintSize="518,271" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Informe um produto" Title="inputInicial">
-      <ui:InputDialog.Result>
-        <OutArgument x:TypeArguments="x:String">[produtoInput]</OutArgument>
-      </ui:InputDialog.Result>
-    </ui:InputDialog>
-    <Sequence sap:VirtualizedContainerService.HintSize="518,1028" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Captura de Dados" sap:VirtualizedContainerService.HintSize="518,1301" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard CloseMode="Always" DisplayName="Browser" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="484,945" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Always" ScopeGuid="8902fab3-8ab3-484b-980e-34707318fb0e">
+      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input inicial" sap:VirtualizedContainerService.HintSize="484,271" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Informe um produto" Title="inputInicial">
+        <ui:InputDialog.Result>
+          <OutArgument x:TypeArguments="x:String">[produtoInput]</OutArgument>
+        </ui:InputDialog.Result>
+      </ui:InputDialog>
+      <uix:NApplicationCard CloseMode="Always" DisplayName="Browser" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="484,947" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Always" ScopeGuid="8902fab3-8ab3-484b-980e-34707318fb0e">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="450,705" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="450,707" sap2010:WorkflowViewState.IdRef="Sequence_1">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd:DataTable" Name="produtosBruto" />
               </Sequence.Variables>
@@ -166,7 +167,7 @@
                   <uix:TargetAnchorable BrowserURL="https://www.amazon.com.br/s?k=mouse+gamer&amp;__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;crid=1NIW4S13AWJBN&amp;sprefix=%2Caps%2C444&amp;ref=nb_sb_noss_2" ContentHash="35uPQllHpkK_GJ1Rr0TASA" DesignTimeRectangle="364, 310, 1497, 8994" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div' parentid='search' tag='DIV' /&gt;" Guid="35200895-4ac9-4bfa-9d36-1744092b8e2d" InformativeScreenshot="58faf6506d7d3d32be5478e47bf2c464.png" Reference="NV0qHazf0EaxSGH7mbJRlg/4kHTrBOr4EOwlm9T7IJpmg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com.br : mouse gamer' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" />
                 </uix:NExtractData.Target>
               </uix:NExtractData>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="tratamentoDados - Invoke Workflow File (tratamentoDados.xaml)" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="flows auxiliares\tratamentoDados.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="tratamentoDados - Invoke Workflow File (tratamentoDados.xaml)" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="flows auxiliares\tratamentoDados.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="sd:DataTable" x:Key="produtosBrutos">[produtosBruto]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
