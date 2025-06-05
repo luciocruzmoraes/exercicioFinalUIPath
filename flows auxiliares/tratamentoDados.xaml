@@ -101,7 +101,7 @@
       <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="tratamentoDados" sap:VirtualizedContainerService.HintSize="618.0000000000001,2280" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="tratamentoDados" sap:VirtualizedContainerService.HintSize="1399,1910.0000000000002" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="prodTratar" />
       <Variable x:TypeArguments="sd:DataTable" Name="dadosLimpos" />
@@ -120,7 +120,6 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BuildDataTable DataTable="[dadosLimpos]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="470,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Column1&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Column2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Frete&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Link_x0020_do_x0020_Produto&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Column1&gt;Nome&lt;/Column1&gt;&#xD;&#xA;    &lt;Column2&gt;Preço&lt;/Column2&gt;&#xD;&#xA;    &lt;Frete&gt;Frete&lt;/Frete&gt;&#xD;&#xA;    &lt;Link_x0020_do_x0020_Produto&gt;URL&lt;/Link_x0020_do_x0020_Produto&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
     <Assign sap:VirtualizedContainerService.HintSize="470,115" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="sd:DataTable">[prodTratar]</OutArgument>
@@ -135,13 +134,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[índice]" DataTable="[prodTratar]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="470,2002" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[índice]" DataTable="[prodTratar]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="470,1772" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="468,1820" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="468,1599" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="nomeProduto" />
               <Variable x:TypeArguments="InArgument" Name="CurrentIndex" />
@@ -188,24 +187,16 @@
                 <InArgument x:TypeArguments="x:String">[prodTratar.Rows(índice)("urlProduto").ToString().Trim()]</InArgument>
               </Assign.Value>
             </Assign>
-            <If Condition="[Not String.IsNullOrEmpty(prodTratar.Rows(índice)(&quot;nomeProduto&quot;).ToString().Trim()) And Not String.IsNullOrEmpty(prodTratar.Rows(índice)(&quot;precoProduto&quot;).ToString().Trim()) And Not String.IsNullOrEmpty(prodTratar.Rows(índice)(&quot;urlProduto&quot;).ToString().Trim())]" sap:VirtualizedContainerService.HintSize="434,950" sap2010:WorkflowViewState.IdRef="If_3">
+            <If Condition="[Not String.IsNullOrEmpty(If(nomeProduto Is Nothing, &quot;&quot;, nomeProduto.ToString()).Trim()) AndAlso Not String.IsNullOrEmpty(If(precoProduto Is Nothing, &quot;&quot;, precoProduto.ToString()).Trim()) AndAlso Not String.IsNullOrEmpty(If(urlProduto Is Nothing, &quot;&quot;, urlProduto.ToString()).Trim()) AndAlso Not String.IsNullOrEmpty(If(freteProduto Is Nothing, &quot;&quot;, freteProduto.ToString()).Trim())]" sap:VirtualizedContainerService.HintSize="434,729" sap2010:WorkflowViewState.IdRef="If_3">
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,594" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,373" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[New Object() {nomeProduto, precoProduto, freteProduto, urlProduto}]" DataTable="[dadosLimpos]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="382,221" sap2010:WorkflowViewState.IdRef="AddDataRow_2">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:AddDataRow>
                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Nome&quot; + nomeProduto + Environment.NewLine + &quot;URL do Produto &quot; + urlProduto + Environment.NewLine + &quot;Preco Produto &quot;  + precoProduto +  Environment.NewLine + &quot;Frete &quot; + freteProduto]" />
-                  <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" ExistingDbConnection="{x:Null}" TimeoutMS="{x:Null}" ConnectionString="Driver={SQLite3 ODBC Driver};Database=C:\\Users\\Aluno\\Documents\\UiPath\\exercicioFinal\\bancoDados.db;" DisplayName="Run Command" sap:VirtualizedContainerService.HintSize="382,138" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_1" ProviderName="System.Data.Odbc" Sql="INSERT INTO Produto (nomeProduto, precoProduto, freteProduto, urlProduto) VALUES (?, ?, ?, ?)">
+                  <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" ExistingDbConnection="{x:Null}" TimeoutMS="{x:Null}" ConnectionString="Driver={SQLite3 ODBC Driver};Database=bancoDados.db;" DisplayName="Run Command" sap:VirtualizedContainerService.HintSize="382,138" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_1" ProviderName="System.Data.Odbc" Sql="INSERT INTO Produto (nomeProduto, precoProduto, freteProduto, urlProduto) VALUES (?, ?, ?, ?)">
                     <ui:ExecuteNonQuery.Parameters>
                       <InArgument x:TypeArguments="x:String" x:Key="nomeProd">
                         <VisualBasicValue x:TypeArguments="x:String" ExpressionText="nomeProduto" />
@@ -244,13 +235,5 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <Sequence sap:VirtualizedContainerService.HintSize="470,48" sap2010:WorkflowViewState.IdRef="Sequence_10">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </Sequence>
   </Sequence>
 </Activity>
