@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="J4eOliq4YU2BgNCKI5UA6A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com.br" CVScreenId="1de3be04-b97f-4b0f-8d01-d91348247c9a" CvElementArea="554, 208, 932, 42" CvType="InputBox" DesignTimeRectangle="567, 211, 911, 38" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='twotabsearchtextbox' tag='INPUT' type='text' class='nav-input nav-progressive-attribute' placeholder='Pesquisar Amazon.com.br' aaname='Pesquisar Amazon.com.br' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="1db6f5f9-6105-4537-b605-e2eabda941ae" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com.br | Tudo pra você, de A a Z.' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="1de3be04-b97f-4b0f-8d01-d91348247c9a" CvTextArea="511, 224, 34, 12" CvTextArgument="Todos" CvType="Text" DesignTimeRectangle="512, 214, 33, 33" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='nav-search-label-id' tag='SPAN' type='' class='nav-search-label nav-progressive-content' aaname='Todos' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Todos' /&gt;" Guid="e30702e0-4647-43d9-9c17-252ad330a2e9" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="da47fba8b69d0a927f297726c2f963eb.png" xmlns="">0XbWveaObd0C_TwDsxYz3LA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

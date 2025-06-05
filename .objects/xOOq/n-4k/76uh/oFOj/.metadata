@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Todos",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "oFOj2PSHPESak8sL-HDLbg",
+  "Reference": "NV0qHazf0EaxSGH7mbJRlg/oFOj2PSHPESak8sL-HDLbg",
+  "ParentRef": "NV0qHazf0EaxSGH7mbJRlg/76uh1J50qkiKqSwDufQc_w",
+  "Created": "2025-06-05T12:31:23.3162085Z",
+  "Updated": "2025-06-05T12:31:23.3162085Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="aLthR3qpvUaYwygi2UZZ9g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com.br" CVScreenId="ee1b1e53-ab91-4272-b723-a2dc0fab5721" CvElementArea="1475, 207, 50, 44" CvType="Button" DesignTimeRectangle="1478, 210, 45, 40" ElementType="Button" FullSelectorArgument="&lt;webctrl id='nav-search-submit-button' tag='INPUT' /&gt;" Guid="981e39b6-fcce-455c-9f58-a5e759ef8905" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com.br | Tudo pra você, de A a Z.' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="ee1b1e53-ab91-4272-b723-a2dc0fab5721" CvElementArea="554, 208, 932, 42" CvType="InputBox" DesignTimeRectangle="567, 211, 911, 38" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='twotabsearchtextbox' tag='INPUT' /&gt;" Guid="35b21ca1-cfbf-483e-b145-65972e8aaccf" SearchSteps="Selector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="29c1d8bfccac6fe93370e8e44cecd67a.png" xmlns="">04RjLoQECWkG-ear9iYXBpQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
