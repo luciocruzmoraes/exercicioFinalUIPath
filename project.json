@@ -2,7 +2,7 @@
   "name": "exercicioFinal",
   "projectId": "3421fde9-fb59-44bb-90bf-e02f74985954",
   "description": "Processo em Branco",
-  "main": "Main.xaml",
+  "main": "flows auxiliares\\extracaoDados.xaml",
   "dependencies": {
     "UiPath.Database.Activities": "[1.10.0]",
     "UiPath.System.Activities": "[25.4.4]",
@@ -48,8 +48,8 @@
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
-      "filePath": "Main.xaml",
-      "uniqueId": "5b48cc44-7e39-44b7-9a7b-9f3d655bf996",
+      "filePath": "flows auxiliares\\extracaoDados.xaml",
+      "uniqueId": "571685f5-b3de-480c-a2fe-192711ca1225",
       "input": [],
       "output": []
     }
