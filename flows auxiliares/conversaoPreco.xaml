@@ -106,9 +106,10 @@
       <AssemblyReference>System.CodeDom</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="conversaoPreco" sap:VirtualizedContainerService.HintSize="1367,1757" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="conversaoPreco" sap:VirtualizedContainerService.HintSize="1186,1611" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Double" Name="dolarCotacaoDouble" />
       <Variable x:TypeArguments="x:String" Name="dolarCotacao" />
@@ -416,11 +417,6 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <ui:BulkAddQueueItems TimeoutMS="{x:Null}" DisplayName="Bulk Add Queue Items" FolderPath="aprendizado" sap:VirtualizedContainerService.HintSize="470,226" sap2010:WorkflowViewState.IdRef="BulkAddQueueItems_1" QueueItemsDataTable="[produtoDataTableAtualizada]" QueueName="produtosAnalise" />
-    <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" ExistingDbConnection="{x:Null}" TimeoutMS="{x:Null}" ConnectionString="Driver={SQLite3 ODBC Driver};Database=bancoDados.db;" DisplayName="Run Command" sap:VirtualizedContainerService.HintSize="470,137" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_1" ProviderName="System.Data.Odbc" Sql="DELETE from Produto">
-      <ui:ExecuteNonQuery.Parameters>
-        <scg:Dictionary x:TypeArguments="x:String, Argument" />
-      </ui:ExecuteNonQuery.Parameters>
-    </ui:ExecuteNonQuery>
+    <ui:BulkAddQueueItems TimeoutMS="{x:Null}" DisplayName="Bulk Add Queue Items" FolderPath="aprendizado" sap:VirtualizedContainerService.HintSize="470,217" sap2010:WorkflowViewState.IdRef="BulkAddQueueItems_1" QueueItemsDataTable="[produtoDataTableAtualizada]" QueueName="produtosAnalise" />
   </Sequence>
 </Activity>

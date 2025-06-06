@@ -2,9 +2,11 @@
   "name": "exercicioFinal",
   "projectId": "3421fde9-fb59-44bb-90bf-e02f74985954",
   "description": "Processo em Branco",
-  "main": "flows auxiliares\\extracaoDados.xaml",
+  "main": "main.xaml",
   "dependencies": {
     "UiPath.Database.Activities": "[1.10.0]",
+    "UiPath.Excel.Activities": "[3.0.1]",
+    "UiPath.MicrosoftOffice365.Activities": "[3.2.0-preview]",
     "UiPath.System.Activities": "[25.4.4]",
     "UiPath.UIAutomation.Activities": "[25.10.4]",
     "UiPath.WebAPI.Activities": "[1.21.1]"
@@ -48,8 +50,8 @@
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
-      "filePath": "flows auxiliares\\extracaoDados.xaml",
-      "uniqueId": "571685f5-b3de-480c-a2fe-192711ca1225",
+      "filePath": "main.xaml",
+      "uniqueId": "6ce98750-839f-4f43-926c-f46669855e0b",
       "input": [],
       "output": []
     }
